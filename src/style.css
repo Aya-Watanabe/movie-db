@@ -112,14 +112,14 @@ form{
 }
 
 .button{
-  background-color:rgba(0,0,0,0.75);
+  /* background-color:rgba(0,0,0,0.75);
   border-radius: 20px;
   color:white;
   padding:1rem 2rem;
   border:1px solid rgba(0,0,0,0.75);
   font-size:1.4rem;
   cursor:pointer;
-  transition: background-color 250ms;
+  transition: background-color 250ms; */
 }
 
 .button:hover{
@@ -140,6 +140,7 @@ form{
 /* movie */
 .movie{
   width:225px;
+  
   margin:1rem;
   background:#373b69;
   color:white;
@@ -159,15 +160,20 @@ flex-wrap:wrap;
 }
 
 .movie-info{
-  display:flex;
+  /* display:flex;
   justify-content: space-between;
-  text-align:center;
+  text-align:center; */
   padding:1rem;
-
 }
 
 .movie-info h3{
   margin:0;
+}
+
+.movie-info p{
+  font-size: 14px;
+  margin: 0;
+  padding:0;
 }
 
 .movie-overlay{
@@ -192,5 +198,5 @@ flex-wrap:wrap;
 }
 
 .movie-overlay p{
-  font-size:16px;
+  font-size:14px;
 }
