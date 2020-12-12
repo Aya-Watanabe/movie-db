@@ -7,12 +7,14 @@ export const Movie = ({movie}) => {
    
     return (
         <div className="movie">
-            
+            {
+            movie.poster_path == null ? <img src ={`https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg`} alt="no poster" style={{height:"76%"}} /> : 
             <img src={IMG_API + movie.poster_path} alt={movie.title}/>
+            }           
             <div className="movie-info">
                 <h3>{movie.title}</h3>
-                <p>{movie.release_date}</p>
-                <p>{movie.vote_average}</p>
+                <p>Release Date: {movie.release_date}</p>
+                <p>Ratings: {movie.vote_average}</p>
               
             </div>
             <div className="movie-overlay">
