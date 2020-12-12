@@ -46,7 +46,6 @@ export const SearchMovies = () => {
 
     const handleDropdownChange = (e) =>{    
         setDropdown(e.target.value);
-     
     }
 
 const handleDropdownSubmit = (e) =>{
@@ -55,10 +54,8 @@ const handleDropdownSubmit = (e) =>{
     fetch(`https://api.themoviedb.org/3/movie/${dropdown}?api_key=96c32a4771978ce6e86038f43c145982`)
     .then((res) => res.json())
     .then((data) =>{
-        // console.log(data);
         setMovies(data.results);
     });
-    
     };
    
     return (
@@ -66,8 +63,6 @@ const handleDropdownSubmit = (e) =>{
         <form onSubmit={handleOnSubimt}>
             <label className="label" htmlFor="search">Movie Name</label>
             <input className="search" type="search" value={searchTerm} onChange={handleOnChange} placeholder="i.e. Harry potter"  />
-            {/* <button
-             className="button" type="submit">Search</button> */}
         </form> 
         <form onSubmit={handleDropdownSubmit}>
             <select value={dropdown}  onChange={handleDropdownChange}>
@@ -83,9 +78,7 @@ const handleDropdownSubmit = (e) =>{
             {movies.length > 0 && movies.map((movie) =>
                 <Movie key={movie.id} movie={movie} />
             )}
-
         </div>
-
         </>
     )
 }

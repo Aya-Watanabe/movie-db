@@ -116,12 +116,11 @@ header h1 {
 /* SearchMovies Part */
 .movie{
   width:225px;
-  
   margin:1rem;
   background:#373b69;
   color:white;
   border-radius:3px;
-  box-shadow:3px 3px 5px rgba(0,0,0,0.1);
+  box-shadow:3px 3px 5px rgba(0,0,0,0.5);
   overflow:hidden;
   position: relative;
 }
@@ -173,10 +172,29 @@ flex-wrap:wrap;
   transform:translateY(0%);
 }
 
-.movie-overlay p{
-  font-size:14px;
+.movie-overlay{
+  background:#373b69;
 }
 
+.movie-overlay h2{
+  color:white;
+}
+
+.movie-overlay p{
+  font-size:14px;
+  color:white;
+}
+
+.movie-overlay .add-btn{
+  background:#21d07a;
+  color:#373b69;
+  border:none;
+  border-radius:2px;
+}
+
+.movie-overlay .add-btn:hover{
+  cursor: pointer;
+}
 .movie-overlay .add-btn:disabled{
   pointer-events: none;
   opacity: 0.5;
