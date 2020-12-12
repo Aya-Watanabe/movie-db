@@ -84,25 +84,13 @@ header h1 {
     border: 0;
 }
 
-.top-bar nav {
-    /* display: none;  */
-    /* width:100%; */
-    /* z-index:2; */
-}
-
-/* .top-bar nav.show{
-    display:block;
-} */
-
 .top-bar ul {
     display:flex;
-   
     align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
     height: 64px;
-   
 }
 
 .top-bar ul li{
@@ -124,8 +112,88 @@ header h1 {
     background-color: #373b69;
     font-weight:bolder;
 }
-   /* NAV END */
+/* NAV END */
+/* SearchMovies Part */
+.movie{
+  width:225px;
+  
+  margin:1rem;
+  background:#373b69;
+  color:white;
+  border-radius:3px;
+  box-shadow:3px 3px 5px rgba(0,0,0,0.1);
+  overflow:hidden;
+  position: relative;
+}
 
+.movie img{ 
+  max-width:100%;
+}
+
+.movie-container{
+  display:flex;
+flex-wrap:wrap;
+}
+
+.movie-info{
+  /* display:flex;
+  justify-content: space-between;
+  text-align:center; */
+  padding:1rem;
+}
+
+.movie-info h3{
+  margin:0;
+}
+
+.movie-info p{
+  font-size: 14px;
+  margin: 0;
+  padding:0;
+}
+
+.movie-overlay{
+  position: absolute;
+  background:white;
+  bottom:0;
+  left:0;
+  right:0;
+  color:#373b69;
+  padding:1rem;
+  transform:translateY(102%);
+  transition: transform 0.3s ease-in-out;
+  overflow: auto;
+  max-height:100%;
+  border-top-left-radius:3px;
+  border-top-right-radius:3px;
+  box-shadow:0px -3px 5px rgba(0,0,0,0.1);
+}
+
+.movie:hover .movie-overlay{
+  transform:translateY(0%);
+}
+
+.movie-overlay p{
+  font-size:14px;
+}
+
+.movie-overlay .add-btn:disabled{
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* FOOTER */
+footer{
+  background:#373b69;
+  color:white;
+}
+
+.tmdb-logo{
+  padding:20px 0;
+}
+
+
+/* ?????? */
   body {
       margin: 0;
       padding:0;
@@ -198,76 +266,4 @@ form{
 }
 }
 
-/* movie */
-.movie{
-  width:225px;
-  
-  margin:1rem;
-  background:#373b69;
-  color:white;
-  border-radius:3px;
-  box-shadow:3px 3px 5px rgba(0,0,0,0.1);
-  overflow:hidden;
-  position: relative;
-}
 
-.movie img{ 
-  max-width:100%;
-}
-
-.movie-container{
-  display:flex;
-flex-wrap:wrap;
-}
-
-.movie-info{
-  /* display:flex;
-  justify-content: space-between;
-  text-align:center; */
-  padding:1rem;
-}
-
-.movie-info h3{
-  margin:0;
-}
-
-.movie-info p{
-  font-size: 14px;
-  margin: 0;
-  padding:0;
-}
-
-.movie-overlay{
-  position: absolute;
-  background:white;
-  bottom:0;
-  left:0;
-  right:0;
-  color:#373b69;
-  padding:1rem;
-  transform:translateY(102%);
-  transition: transform 0.3s ease-in-out;
-  overflow: auto;
-  max-height:100%;
-  border-top-left-radius:3px;
-  border-top-right-radius:3px;
-  box-shadow:0px -3px 5px rgba(0,0,0,0.1);
-}
-
-.movie:hover .movie-overlay{
-  transform:translateY(0%);
-}
-
-.movie-overlay p{
-  font-size:14px;
-}
-
-/* FOOTER */
-footer{
-  background:#373b69;
-  color:white;
-}
-
-.tmdb-logo{
-  padding:20px 0;
-}
