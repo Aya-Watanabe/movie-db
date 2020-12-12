@@ -2,22 +2,22 @@ import React from "react";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
-export const Movie = ({title, poster_path, overview, vote_average, release_date}) => {
+export const Movie = ({movie}) => {
   
    
     return (
         <div className="movie">
             
-            <img src={IMG_API + poster_path} alt={title}/>
+            <img src={IMG_API + movie.poster_path} alt={movie.title}/>
             <div className="movie-info">
-                <h3>{title}</h3>
-                <p>{release_date}</p>
-                <p>{vote_average}</p>
+                <h3>{movie.title}</h3>
+                <p>{movie.release_date}</p>
+                <p>{movie.vote_average}</p>
               
             </div>
             <div className="movie-overlay">
                 <h2>Overview:</h2>
-                <p>{overview}</p>
+                <p>{movie.overview}</p>
                 <button className="add-btn">Add<i class="far fa-heart"></i></button>
             </div>
             

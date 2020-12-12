@@ -3,7 +3,8 @@ import './style.css';
 import Header from './components/Header';
 import SearchMovies from './components/SearchMovies';
 import Footer from './components/Footer';
-import Watchlist from './components/Watchlist';
+import About from './components/About';
+import MyFavorite from './components/MyFavorite';
 
 
 export const App = () => {
@@ -14,7 +15,8 @@ export const App = () => {
       <h1 className="title">Movie Search</h1>
       <SearchMovies />
     </div>
-    <Watchlist />
+    <MyFavorite />
+    <About />
     <Footer />
     </>
   )
