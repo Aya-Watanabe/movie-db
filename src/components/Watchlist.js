@@ -17,7 +17,7 @@ export const Watchlist = () => {
         <div className="movie-container">
             {watchlist.map((movie)=>(
                
-                <WatchlistMovie movie={movie} type="watchlist" />
+                <WatchlistMovie key={movie.id} movie={movie} type="watchlist" />
             ))}
         </div>
             ) : (

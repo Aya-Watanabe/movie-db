@@ -5,14 +5,7 @@ const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
 export const WatchlistMovie = ({movie,type}) => {
   
-    //
     const {removeMovieFromWatchlist}= useContext(GlobalContext);
-
-    //prevent same movie added twice
-    // let storedMovie = watchlist.find(o => o.id===movie.id);
-
-    //disable button after added once
-    // const watchlistDisabled = storedMovie ? true : false;
    
     return (
         <div className="movie">
