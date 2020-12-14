@@ -1,17 +1,28 @@
-import React from "react";
-
+import React, {useContext}from "react";
+import {GlobalContext} from '../context/GlobalState';
+import WatchlistMovie from "./WatchlistMovie";
 
 
 export const Watchlist = () => {
   
+    const {watchlist} = useContext(GlobalContext);
    
     return (
-        <div className="">
-            
-          
-            
+        <>
+        <h1>My Watch List</h1>
+
+        {watchlist.length > 0 ? (
+        <div className="movie-container">
+            {watchlist.map((movie)=>(
+               
+                <WatchlistMovie movie={movie} type="watchlist" />
+            ))}
         </div>
-     
+            ) : (
+                <h2>No movie in the list</h2>
+        ) }
+       
+     </>
     )
 }
 

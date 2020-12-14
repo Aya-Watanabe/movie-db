@@ -204,6 +204,23 @@ flex-wrap:wrap;
   opacity: 0.5;
 }
 
+.movie-overlay .remove-btn{
+  background:#21d07a;
+  color:#373b69;
+  border:none;
+  border-radius:2px;
+}
+
+.movie-overlay .remove-btn:hover{
+  cursor: pointer;
+}
+.movie-overlay .remove-btn:disabled{
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+
 /* FOOTER */
 footer{
   background:#373b69;

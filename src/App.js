@@ -6,17 +6,20 @@ import Header from './components/Header';
 import SearchMovies from './components/SearchMovies';
 import Footer from './components/Footer';
 import About from './components/About';
-import MyFavorite from './components/MyFavorite';
+import Watchlist from './components/Watchlist';
+
+import {GlobalProvider} from './context/GlobalState';
 
 
 export const App = () => {
   return (
+    <GlobalProvider>
     <Router>
         <div className="App">
           <Header />
           <Switch>
             <Route path="/" exact><SearchMovies /></Route>
-            <Route path="/MyFavorite"><MyFavorite /></Route>
+            <Route path="/Watchlist"><Watchlist /></Route>
             <Route path="/About"><About /></Route>
             {/* <Route><PageNotFound /></Route> */}
             
@@ -24,6 +27,7 @@ export const App = () => {
           <Footer />
         </div>
       </Router>
+      </GlobalProvider>
   )
 }
 

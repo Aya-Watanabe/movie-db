@@ -3,16 +3,16 @@ import {GlobalContext} from '../context/GlobalState';
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
-export const Movie = ({movie}) => {
+export const WatchlistMovie = ({movie,type}) => {
   
-    //so that valiables from GlobalState.js can be used here...
-    const {addMovieToWatchlist, watchlist}= useContext(GlobalContext);
+    //
+    const {removeMovieFromWatchlist}= useContext(GlobalContext);
 
     //prevent same movie added twice
-    let storedMovie = watchlist.find(o => o.id===movie.id);
+    // let storedMovie = watchlist.find(o => o.id===movie.id);
 
     //disable button after added once
-    const watchlistDisabled = storedMovie ? true : false;
+    // const watchlistDisabled = storedMovie ? true : false;
    
     return (
         <div className="movie">
@@ -29,10 +29,11 @@ export const Movie = ({movie}) => {
             <div className="movie-overlay">
                 <h2>Overview:</h2>
                 <p>{movie.overview}</p>
-                <button className="add-btn" 
-                        disabled={watchlistDisabled}
-                        onClick ={() => addMovieToWatchlist(movie)}>
-                    Add<i class="far fa-heart"></i>
+                <button className="remove-btn" 
+                        // disabled={watchlistDisabled}
+                        onClick ={() => removeMovieFromWatchlist(movie.id)}
+                        >
+                    Remove
                 </button>
             </div>
             
@@ -41,4 +42,4 @@ export const Movie = ({movie}) => {
     )
 }
 
-export default Movie;
+export default WatchlistMovie;

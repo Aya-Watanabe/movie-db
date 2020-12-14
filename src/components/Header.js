@@ -13,7 +13,7 @@ export const Header = () => {
                 <nav id="nav-to-toggle">
                     <ul>
                         <li><Link to ="/">Home</Link></li>
-                        <li><Link to ="/MyFavorite">My Favorite</Link></li>
+                        <li><Link to ="/Watchlist">Watchlist</Link></li>
                         <li><Link to ="/About">About</Link></li>
                        
                     </ul>
