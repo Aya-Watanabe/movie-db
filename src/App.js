@@ -24,7 +24,7 @@ export const App = () => {
             {/* <Route><PageNotFound /></Route> */}
             
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
       </GlobalProvider>

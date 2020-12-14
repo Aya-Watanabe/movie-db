@@ -32,7 +32,7 @@ export const Movie = ({movie}) => {
                 <button className="add-btn" 
                         disabled={watchlistDisabled}
                         onClick ={() => addMovieToWatchlist(movie)}>
-                    Add<i class="far fa-heart"></i>
+                    Add<i class="fas fa-heart"></i>
                 </button>
             </div>
             

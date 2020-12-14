@@ -19,7 +19,11 @@ export const Watchlist = () => {
             ))}
         </div>
             ) : (
-                <h2>No movie in the list</h2>
+                <div>
+                    <img src="../images/film_large.png"/>
+                    <h2>No movie in the list</h2>
+                </div>
+                
         ) }
        
      </>

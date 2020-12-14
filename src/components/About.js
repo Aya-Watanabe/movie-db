@@ -2,9 +2,12 @@ import React from 'react'
 
 export const About = () => {
     return (
-        <div>
-            This is About Page
+        <>
+        <h1>About</h1>
+        <div className="movie-container">
+           
         </div>
+       </>
     )
 }
 

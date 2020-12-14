@@ -30,10 +30,9 @@ export const WatchlistMovie = ({movie,type}) => {
                 <h2>Overview:</h2>
                 <p>{movie.overview}</p>
                 <button className="remove-btn" 
-                        // disabled={watchlistDisabled}
                         onClick ={() => removeMovieFromWatchlist(movie.id)}
                         >
-                    Remove
+                    Remove<i class="fas fa-heart-broken"></i>
                 </button>
             </div>
             

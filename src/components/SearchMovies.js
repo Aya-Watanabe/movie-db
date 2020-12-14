@@ -4,11 +4,7 @@ import Movie from './Movie';
  const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=96c32a4771978ce6e86038f43c145982&include_adult=false&query=`;
 
  const POPULAR = `https://api.themoviedb.org/3/movie/popular?api_key=96c32a4771978ce6e86038f43c145982`;
- const TOP_RATED = `https://api.themoviedb.org/3/movie/top_rated?api_key=96c32a4771978ce6e86038f43c145982`;
- const UPCOMING = `https://api.themoviedb.org/3/movie/upcoming?api_key=96c32a4771978ce6e86038f43c145982`;
- const NOW_PLAYING = `https://api.themoviedb.org/3/movie/now_playing?api_key=96c32a4771978ce6e86038f43c145982`;
-
- const IMG_API = "https://image.tmdb.org/t/p/w1280";
+ 
 
 export const SearchMovies = () => {
 
