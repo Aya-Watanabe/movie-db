@@ -8,7 +8,7 @@ export const Header = () => {
     return (
         <header>
             <div class="top-bar"> 
-                <h1><Link to ="/"><i class="fas fa-film"></i> Movie DB</Link></h1>
+                <h1><Link to ="/"><i class="fas fa-film"></i> MDB</Link></h1>
                 <button class="nav-button" id="nav-button"><span class="hamburger-icon">&#9776;</span><span class="sr-only">Menu</span></button>
                 <nav id="nav-to-toggle">
                     <ul>

@@ -56,8 +56,9 @@ const handleDropdownSubmit = (e) =>{
    
     return (
         <>
+        <div class="form-container">
         <form onSubmit={handleOnSubimt}>
-            <label className="label" htmlFor="search">Movie Name</label>
+            <label className="label" htmlFor="search"><i class="fas fa-search"></i></label>
             <input className="search" type="search" value={searchTerm} onChange={handleOnChange} placeholder="i.e. Harry potter"  />
         </form> 
         <form onSubmit={handleDropdownSubmit}>
@@ -69,11 +70,12 @@ const handleDropdownSubmit = (e) =>{
             </select>
             <button className="button" type="submit">Search</button>
         </form> 
+        </div>
 
         <div className="movie-container">
             {movies.length > 0 && movies.map((movie) =>
                 <Movie key={movie.id} movie={movie} />
-            )}
+            )}  
         </div>
         </>
     )

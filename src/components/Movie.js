@@ -23,7 +23,7 @@ export const Movie = ({movie}) => {
             <div className="movie-info">
                 <h3>{movie.title}</h3>
                 <p>Release Date: {movie.release_date}</p>
-                <p><i class="fas fa-star"></i>{movie.vote_average}</p>
+                <p><i class="fas fa-star" style={{color: 'yellow'}}></i> {movie.vote_average}</p>
               
             </div>
             <div className="movie-overlay">

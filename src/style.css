@@ -29,6 +29,10 @@ html{
 
   body{
     font-family:"Source Sans Pro", sans-serif;
+    margin: 0;
+    padding:0;
+    background-color:#e5e5e5;
+    color:#262949;
   }
 
   /* NAV */
@@ -135,7 +139,9 @@ header h1 {
 
 .movie-container{
   display:flex;
-flex-wrap:wrap;
+  flex-wrap:wrap;
+  max-width:1300px;
+  margin:0 auto;
 }
 
 .movie-info{
@@ -233,36 +239,32 @@ footer{
 
 
 /* ?????? */
-  body {
-      margin: 0;
-      padding:0;
-      background-color: rgb(244,244,244);     
-      color:#333;
-      font-family:"Source Sans Pro", sans-serif;;
-  }
+ 
 
-  p{
-    font-size:1.6em;
-  }
-
-  small{
-    font-size:1.2rem;
-  }
-
-  .container{
+  .form-container{
     margin:0 auto;
-    max-width: 1200px;
-    padding:40px;
+    
   }
 
-  .title{
+  @media(min-width:760px){
+.form-container{
+    margin:20px auto 10px;
+    max-width: 1000px;
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+  }
+  
+  }
+
+  /* .title{
     font-size:3rem;
     text-align:center;
   }
-  
-form{
+   */
+/* form{
   display: grid;
-}
+} */
 
 .label{
   font-size:1.2em;
@@ -279,16 +281,6 @@ form{
  margin-bottom: 1rem;
 }
 
-.button{
-  /* background-color:rgba(0,0,0,0.75);
-  border-radius: 20px;
-  color:white;
-  padding:1rem 2rem;
-  border:1px solid rgba(0,0,0,0.75);
-  font-size:1.4rem;
-  cursor:pointer;
-  transition: background-color 250ms; */
-}
 
 .button:hover{
   background-color:rgba(0,0,0,0.85);
