@@ -10,13 +10,13 @@ export const WatchlistMovie = ({movie,type}) => {
     return (
         <div className="movie">
             {
-            movie.poster_path == null ? <img src ={`https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg`} alt="no poster" style={{height:"76%"}} /> : 
+            movie.poster_path == null ? <img src ={`https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg`} alt="no poster" style={{height:"76%"}} /> :  
             <img src={IMG_API + movie.poster_path} alt={movie.title}/>
             }           
             <div className="movie-info">
                 <h3>{movie.title}</h3>
                 <p>Release Date: {movie.release_date}</p>
-                <p><i class="fas fa-star"></i>{movie.vote_average}</p>
+                <p><i class="fas fa-star" style={{color: 'yellow'}}></i> {movie.vote_average}</p>
               
             </div>
             <div className="movie-overlay">

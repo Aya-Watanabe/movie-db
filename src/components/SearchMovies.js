@@ -57,11 +57,12 @@ const handleDropdownSubmit = (e) =>{
     return (
         <>
         <div class="form-container">
-        <form onSubmit={handleOnSubimt}>
-            <label className="label" htmlFor="search"><i class="fas fa-search"></i></label>
-            <input className="search" type="search" value={searchTerm} onChange={handleOnChange} placeholder="i.e. Harry potter"  />
+        <form className="search-form" onSubmit={handleOnSubimt}>
+            <label className="label" htmlFor="search"></label>
+            <i class="fas fa-search"></i>
+            <input className="search" type="search" value={searchTerm} onChange={handleOnChange} placeholder=" i.e. Harry potter"  />
         </form> 
-        <form onSubmit={handleDropdownSubmit}>
+        <form className="select-form" onSubmit={handleDropdownSubmit}>
             <select value={dropdown}  onChange={handleDropdownChange}>
              <option value= "popular">POPULAR</option>
              <option value="top_rated">TOP RATED</option>

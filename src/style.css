@@ -31,8 +31,10 @@ html{
     font-family:"Source Sans Pro", sans-serif;
     margin: 0;
     padding:0;
-    background-color:#e5e5e5;
+    /* background-color:#e5e5e5; */
+    background-color:white;
     color:#262949;
+    
   }
 
   /* NAV */
@@ -48,7 +50,8 @@ header h1 {
 }
 
 .top-bar {
-    background-color:#373b69;
+    /* background-color:#373b69; */
+    background-color: #032541;
     display: flex;
     justify-content: space-between;
     height:64px;
@@ -62,7 +65,7 @@ header h1 {
 
 .nav-button {
     font-size: 2.3em;
-    background-color:#373b69;
+    background-color:#032541;
     border: none;
     color: white;
     display: block;
@@ -108,7 +111,7 @@ header h1 {
 
 .top-bar nav a {
     padding: 0;
-    line-height: 50px;
+    line-height: 64px;
     font-size: 1.2em;
     display: block;
     padding-left:8px;
@@ -117,15 +120,20 @@ header h1 {
 .top-bar nav li:hover,
 .top-bar nav li:active,
 .top-bar nav li:focus {
-    background-color: #373b69;
+    /* background-color: #373b69; */
+    background-color: #21d07a;
     font-weight:bolder;
+}
+
+.top-bar nav a:hover{
+    color:#032541;
 }
 /* NAV END */
 /* SearchMovies Part */
 .movie{
   width:225px;
   margin:1rem;
-  background:#373b69;
+  background:#032541;
   color:white;
   border-radius:3px;
   box-shadow:3px 3px 5px rgba(0,0,0,0.5);
@@ -148,7 +156,7 @@ header h1 {
   /* display:flex;
   justify-content: space-between;
   text-align:center; */
-  padding:1rem;
+  padding:1rem 1rem 0.5rem;
 }
 
 .movie-info h3{
@@ -157,7 +165,7 @@ header h1 {
 
 .movie-info p{
   font-size: 14px;
-  margin: 0;
+  margin: 8px 0;
   padding:0;
 }
 
@@ -167,7 +175,7 @@ header h1 {
   bottom:0;
   left:0;
   right:0;
-  color:#373b69;
+  color:#032541;
   padding:1rem;
   transform:translateY(102%);
   transition: transform 0.3s ease-in-out;
@@ -183,7 +191,7 @@ header h1 {
 }
 
 .movie-overlay{
-  background:#373b69;
+  background:#032541;
 }
 
 .movie-overlay h2{
@@ -197,13 +205,16 @@ header h1 {
 
 .movie-overlay .add-btn{
   background:#21d07a;
-  color:#373b69;
+  color:#032541;
   border:none;
   border-radius:2px;
+  padding:5px;
+  outline: none;
 }
 
 .movie-overlay .add-btn:hover{
   cursor: pointer;
+  font-weight: bolder;
 }
 .movie-overlay .add-btn:disabled{
   pointer-events: none;
@@ -212,14 +223,18 @@ header h1 {
 
 .movie-overlay .remove-btn{
   background:#21d07a;
-  color:#373b69;
+  color:#032541;
   border:none;
   border-radius:2px;
+  padding:5px;
+  outline: none;
 }
 
 .movie-overlay .remove-btn:hover{
   cursor: pointer;
+  font-weight: bolder;
 }
+
 .movie-overlay .remove-btn:disabled{
   pointer-events: none;
   opacity: 0.5;
@@ -229,7 +244,7 @@ header h1 {
 
 /* FOOTER */
 footer{
-  background:#373b69;
+  background:#032541;
   color:white;
 }
 
@@ -283,14 +298,48 @@ footer{
 
 .fa-search{
 margin-right:10px;
-}
 
+}
 
 .button:hover{
   background-color:rgba(0,0,0,0.85);
 }
 
-/* OVERLAY */
+/* WATCHLIST PAGE */
+
+.fav-h1{
+  margin:30px 0;
+  text-align:center;
+}
+
+.no-fev-movie{
+  text-align:center;
+}
+
+
+/* ABOUT PAGE */
+.overlay-text-big
+{
+  margin:30px 0 80px;
+  text-align:center;
+}
+
+.about-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+}
+
+.tmdb-logo{
+  width:35%;
+}
+.overlay-text-small{
+  width:55%;
+  font-size:1.2em;
+}
+
+/* ABOUT OVERLAY */
 .about{
   position: relative;
   background-image:url(https://cdn.wallpapersafari.com/45/33/GTKV1u.jpg);
@@ -314,6 +363,7 @@ margin-right:10px;
   z-index:100;
   }
 
+  
 @media (min-width:760px){
 form{
   grid-template-columns: auto 1fr auto;
