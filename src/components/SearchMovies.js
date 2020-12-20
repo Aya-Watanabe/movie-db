@@ -57,9 +57,10 @@ const handleDropdownSubmit = (e) =>{
     return (
         <>
         <div class="form-container">
+       
         <form className="search-form" onSubmit={handleOnSubimt}>
             <label className="label" htmlFor="search"></label>
-            <i class="fas fa-search"></i>
+            {/* <i class="fas fa-search"></i> */}
             <input className="search" type="search" value={searchTerm} onChange={handleOnChange} placeholder=" i.e. Harry potter"  />
         </form> 
         <form className="select-form" onSubmit={handleDropdownSubmit}>
