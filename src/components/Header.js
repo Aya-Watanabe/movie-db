@@ -1,8 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-
-
 export const Header = () => {
    
     return (
@@ -12,7 +10,7 @@ export const Header = () => {
                 <button class="nav-button" id="nav-button"><span class="hamburger-icon">&#9776;</span><span class="sr-only">Menu</span></button>
                 <nav id="nav-to-toggle">
                     <ul>
-                        <li><Link to ="/">Home</Link></li>
+                        <li><Link to ="/"><i class="fas fa-home"></i></Link></li>
                         <li><Link to ="/Watchlist">Watchlist</Link></li>
                         <li><Link to ="/About">About</Link></li>
                        

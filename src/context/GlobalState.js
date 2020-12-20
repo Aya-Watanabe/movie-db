@@ -34,7 +34,7 @@ const removeMovieFromWatchlist = (id) =>{
     return (
         <GlobalContext.Provider value={{
             watchlist:state.watchlist, 
-            watched:state.watched,
+            // watched:state.watched,
             addMovieToWatchlist,
             removeMovieFromWatchlist,
             }}>
