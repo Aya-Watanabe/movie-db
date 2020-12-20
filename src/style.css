@@ -340,15 +340,16 @@ html{
 /* ABOUT PAGE */
   .overlay-text-big
   {
-    margin:30px 0 80px;
+    margin:30px 0;
     text-align:center;
   }
 
   .about-container{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width:100%;
+   text-align:center;
+  }
+
+  .about-container p{
+    margin:0 auto;
   }
 
   .tmdb-logo{
@@ -405,6 +406,18 @@ html{
   .select-form .button{
   
     font-size:1.5rem;
+  }
+
+  .overlay-text-big
+  {
+    margin:30px 0 80px;
+  }
+  
+  .about-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
   }
   
 }
