@@ -42,28 +42,47 @@ html{
     text-decoration: none;
     color: white;
     padding-left:8px;
+  }
+
+  header h1 {
+      font-size: 2.5em;
+      padding-left:15px;
+  }
+
+  .top-bar {
+      background-color: #032541;
+      display: flex;
+      justify-content: space-between;
+      height:64px;
+  }
+
+  .top-bar h1{
+    margin:0;
+    padding:0;
+    line-height: 64px;
+  }
+
+  .hamburger-icon {
+    display: block;
+    line-height: 60px; 
 }
 
-header h1 {
-    font-size: 2.5em;
-    padding-left:15px;
-}
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+ 
+  header nav{
+    display:none;
+  }
 
-.top-bar {
-    /* background-color:#373b69; */
-    background-color: #032541;
-    display: flex;
-    justify-content: space-between;
-    height:64px;
-}
-
-.top-bar h1{
-  margin:0;
-  padding:0;
-  line-height: 64px;
-}
-
-.nav-button {
+  .nav-button {
     font-size: 2.3em;
     background-color:#032541;
     border: none;
@@ -76,24 +95,8 @@ header h1 {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-.hamburger-icon {
-    /* display: block; */
-    height: 40px;
-    display:none;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
-}
+    outline:none;
+  }
 
 .top-bar ul {
     display:flex;
@@ -120,7 +123,6 @@ header h1 {
 .top-bar nav li:hover,
 .top-bar nav li:active,
 .top-bar nav li:focus {
-    /* background-color: #373b69; */
     background-color: #21d07a;
     font-weight:bolder;
 }
@@ -128,8 +130,26 @@ header h1 {
 .top-bar nav a:hover{
     color:#032541;
 }
-/* NAV END */
-/* SearchMovies Part */
+
+/* SEARCH BAR PART */
+.form-container{
+  margin:0 auto;
+}
+
+.input{
+ font-size:1.6rem;
+ padding:0.5rem 2rem;
+ line-height: 2.8rem;
+ border-radius: 20px;
+ border:1px solid #ddd; 
+ margin-bottom: 1rem;
+}
+
+.button:hover{
+  cursor:pointer;
+}
+
+/* MOVIES PART */
 .movie{
   width:225px;
   margin:1rem;
@@ -240,71 +260,6 @@ header h1 {
   opacity: 0.5;
 }
 
-
-
-/* FOOTER */
-footer{
-  background:#032541;
-  color:white;
-}
-
-.tmdb-logo{
-  padding:20px 0;
-}
-
-
-/* ?????? */
- 
-
-  .form-container{
-    margin:0 auto;
-    
-  }
-
-  @media(min-width:760px){
-.form-container{
-    margin:20px auto 10px;
-    max-width: 1000px;
-    display:flex;
-    flex-direction:row-reverse;
-    justify-content: space-between;
-  }
-  
-  }
-
-  /* .title{
-    font-size:3rem;
-    text-align:center;
-  }
-   */
-/* form{
-  display: grid;
-} */
-
-.label{
-  font-size:1.2em;
-  margin-bottom: 0.2rem;
-  text-transform: uppercase;
-}
-
-.input{
- font-size:1.6rem;
- padding:0.5rem 2rem;
- line-height: 2.8rem;
- border-radius: 20px;
- border:1px solid #ddd; 
- margin-bottom: 1rem;
-}
-
-.fa-search{
-margin-right:10px;
-
-}
-
-.button:hover{
-  background-color:rgba(0,0,0,0.85);
-}
-
 /* WATCHLIST PAGE */
 
 .fav-h1{
@@ -315,7 +270,6 @@ margin-right:10px;
 .no-fev-movie{
   text-align:center;
 }
-
 
 /* ABOUT PAGE */
 .overlay-text-big
@@ -363,16 +317,50 @@ margin-right:10px;
   z-index:100;
   }
 
+/* FOOTER */
+footer{
+  background:#032541;
+  color:white;
+}
+
+.tmdb-logo{
+  padding:20px 0;
+}
+
+
+  @media(min-width:760px){
+/* NAV */
+  header nav{
+    display:block;
+    }
+
+  .hamburger-icon {
+    display: none;  
+}
+
+/* SEARCH PAGE */
+
+  form{
+    grid-template-columns: auto 1fr auto;
+    gap:1rem;
+    align-items: center;
+  }
+  .input{
+    margin-bottom:0;
+  }
+
+  .form-container{
+      margin:20px auto 10px;
+      max-width: 1000px;
+      display:flex;
+      flex-direction:row-reverse;
+      justify-content: space-between;
+    }
   
-@media (min-width:760px){
-form{
-  grid-template-columns: auto 1fr auto;
-  gap:1rem;
-  align-items: center;
-}
-.input{
-  margin-bottom:0;
-}
-}
+  }
+
+
+
+  
 
 
