@@ -27,10 +27,8 @@ export const WatchlistMovie = ({movie,type}) => {
                         >
                     Remove<i class="fas fa-heart-broken"></i>
                 </button>
-            </div>
-            
-        </div>
-     
+            </div>  
+        </div> 
     )
 }
 

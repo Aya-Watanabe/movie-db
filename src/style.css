@@ -36,43 +36,6 @@ html{
       color:#262949;
     
   }
-  /* RESPONSIVE OVERLAY */
-  /* .res-overlay{
-      position:fixed;
-      background-color:rgba(253, 252, 252, 0.85);
-      top:0;
-      left: 0;
-      right:0;
-      bottom:0;
-      z-index:1000;
-      text-align: center;
-      padding:64px;
-      pointer-events: none;
-      opacity:0;
-  }
-
-  .fa-times{
-      position: absolute;
-      top:10px;
-      right:10px;
-      cursor:pointer;
-    }
-
-  .res-overlay ul{
-    list-style:none;
-    margin:0;
-    padding:0;
-  }
-
-  .res-overlay li{
-    margin-top:24px;
-  }
-
-  .res-overlay a{
-    text-decoration: none;
-    font-size:1.5rem;
-  } */
-
 
   /* NAV */
   header a {
@@ -134,7 +97,6 @@ html{
       line-height: 64px;
       font-size: 1rem;
      display:inline-block;
-      /* padding-left:8px; */
   }
 
     .top-bar .nav-item{
@@ -224,10 +186,6 @@ html{
   }
 
   .movie-container{
-    /* display:flex;
-    flex-wrap:wrap;
-    max-width:1300px;
-    margin:0 auto; */
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(230px, 1fr) );
   }
@@ -318,6 +276,14 @@ html{
   }
 
 /* WATCHLIST PAGE */
+  .watchlist-movie-container{
+    /* display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(230px, 1fr) ); */
+    display:flex;
+    flex-wrap:wrap;
+    width:85%;
+    margin:0 auto;
+  }
 
   .fav-h1{
     margin:30px 0;
@@ -394,7 +360,6 @@ html{
   }
 
   .select-form .button{
-  
     font-size:1.5rem;
   }
 
@@ -414,9 +379,9 @@ html{
 
   @media(min-width:600px){
 /* NAV BAR */
-.top-bar ul li {
-  padding: 0 30px;
-}
+  .top-bar ul li {
+    padding: 0 30px;
+  }
 
 /* SEARCH PAGE */
   form{
