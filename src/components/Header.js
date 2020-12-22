@@ -7,12 +7,30 @@ export const Header = () => {
         <header>
             <div class="top-bar"> 
                 <h1><Link to ="/"><i class="fas fa-film"></i> MDB</Link></h1>
-                <button class="nav-button" id="nav-button"><span class="hamburger-icon">&#9776;</span><span class="sr-only">Menu</span></button>
+                
                 <nav id="nav-to-toggle">
                     <ul>
-                        <li><Link to ="/"><i class="fas fa-home"></i></Link></li>
-                        <li><Link to ="/Watchlist">Watchlist</Link></li>
-                        <li><Link to ="/About">About</Link></li>
+                        <li><Link to ="/">
+                            <div class="nav-item">
+                            <i class="fas fa-home fa-2x"></i>
+                            <span>Home</span>
+                            </div>
+                            </Link>
+                            </li>
+                        <li><Link to ="/Watchlist">
+                            <div class="nav-item">
+                            <i class="far fa-list-alt fa-2x"></i>
+                            <span>Watchlist</span>
+                            </div>
+                            </Link>
+                        </li>
+                        <li><Link to ="/About">
+                            <div class="nav-item">
+                            <i class="fas fa-users fa-2x"></i>
+                            <span>About</span>
+                            </div>
+                            </Link>
+                        </li>
                        
                     </ul>
                 </nav>
