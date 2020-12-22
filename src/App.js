@@ -14,7 +14,7 @@ import {GlobalProvider} from './context/GlobalState';
 export const App = () => {
   return (
     <GlobalProvider>
-    <Router>
+    <Router basename={'/movie-db'}>
         <div className="App">
           <NavOverlay />
           <Header />
